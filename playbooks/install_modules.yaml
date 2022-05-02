@@ -1,9 +1,7 @@
 ---
 - name: Load RKE kernel modules
-  hosts: all
-  remote_user: root
-  become: true
-  become_method: sudo
+  hosts: rke-hosts
+  #remote_user: root
   vars:
     kernel_modules:
       - br_netfilter

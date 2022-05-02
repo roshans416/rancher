@@ -1,9 +1,7 @@
 ---
 - name: Disable swap and load kernel modules
   hosts: rke-hosts
-  remote_user: root
-  become: true
-  become_method: sudo
+  #remote_user: root
   tasks:
     - name: Disable SWAP since kubernetes can't work with swap enabled (1/2)
       shell: |
